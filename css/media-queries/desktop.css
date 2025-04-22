@@ -1,0 +1,10 @@
+@media (min-width: 1024px) {
+    .main__link-container{
+        grid-template-columns: repeat(4, minmax(100px, 150px));
+    }
+    .main__button{
+        margin: 18px 45px 0 0;
+    }
+  }
+
+

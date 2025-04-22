@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contenedor Desplegable Exclusivo</title>
+  <style>
+    .dropdown-container {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .dropdown-title {
+      background-color: #f0f0f0;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-title:hover {
+      background-color: #e0e0e0;
+    }
+
+    .dropdown-body {
+      display: none;
+      padding: 10px 15px;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+    }
+
+    .dropdown-container.active .dropdown-body {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="dropdowns-root"></div>
+
+<script>
+  function createDropdowns(data) {
+    const root = document.getElementById('dropdowns-root');
+    root.innerHTML = ''; // Limpiar si hay contenido previo
+
+    data.forEach(([title, body], index) => {
+      const container = document.createElement('div');
+      container.className = 'dropdown-container';
+
+      const header = document.createElement('div');
+      header.className = 'dropdown-title';
+      header.textContent = title;
+
+      const content = document.createElement('div');
+      content.className = 'dropdown-body';
+      content.innerHTML = body;
+
+      header.addEventListener('click', () => {
+        const allContainers = root.querySelectorAll('.dropdown-container');
+        allContainers.forEach((el) => {
+          if (el !== container) el.classList.remove('active');
+        });
+
+        container.classList.toggle('active');
+      });
+
+      container.appendChild(header);
+      container.appendChild(content);
+      root.appendChild(container);
+    });
+  }
+
+  // Ejemplo de uso
+  const data = [
+    ['Título 1', '<p>Este es el contenido del primer bloque.</p>'],
+    ['Título 2', '<ul><li>Elemento 1</li><li>Elemento 2</li></ul>'],
+    ['Título 3', '<div><strong>Contenido destacado</strong> en HTML</div>']
+  ];
+
+  createDropdowns(data);
+</script>
+
+</body>
+</html>

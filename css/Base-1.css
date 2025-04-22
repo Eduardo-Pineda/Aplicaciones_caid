@@ -1,0 +1,30 @@
+:root {
+    --main-background-color: #F5F7FA;
+    --main-button-color: #73B060;
+    --main-shadow-color: rgba(0, 0, 0, 0.5);
+    --lavander:#44ADE2;
+    --dark-gray:#666;
+    --white: #fff;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: "Roboto", sans-serif;
+
+}
+
+body{
+    display: flex;
+    background-color: var(--main-background-color);
+
+}
+
+header{
+    margin: 10px 0;
+}
+
