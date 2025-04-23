@@ -55,3 +55,39 @@
     min-height: 71px;
     background-color: red;
 }
+
+.dropdown-container {
+    width: 95%;
+    min-width: 645px;
+    max-width: 1290px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    font-family: Arial, sans-serif;
+  }
+
+  .dropdown-title {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px 0 25px 35px;
+    transition: background-color 0.3s;
+  }
+
+  .dropdown-title:hover {
+    background-color: #e0e0e0;
+  }
+
+  .dropdown-body {
+    display: none;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .dropdown-container.active .dropdown-body {
+    display: block;
+  }
