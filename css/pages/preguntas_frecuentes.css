@@ -42,6 +42,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-left: 35px;
+
 }
 
 .question__body{
@@ -69,12 +70,13 @@
   .dropdown-title {
     background-color: white;
     padding: 10px 15px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
     padding: 25px 0 25px 35px;
-    transition: background-color 0.3s;
+    transition: max-height 3.5s ease, padding 0.5s ease;
+
   }
 
   .dropdown-title:hover {
@@ -83,11 +85,48 @@
 
   .dropdown-body {
     display: none;
-    padding: 10px 15px;
+    /* padding: 10px 15px; */
+    padding: 5px 15px 10px 15px;
     background-color: #fff;
     border-radius: 0 0 15px 15px;
+    transition: opacity 1.5s ease;
+
+    
   }
 
   .dropdown-container.active .dropdown-body {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  
+  }
+
+  .dropdown-body p{
+    margin: 0 40px;
+    font-size: 16px;
+    color: #666;
+  }
+
+  .dropdown-body img{
+    width: auto;
+    max-width: 625px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    align-self: center;
+    border: 1px solid #ccc;
+  }
+
+  .dropdown-title--borderRadiusFix{
+    border-radius: 15px 15px 0 0;
+    padding-bottom: 10px;
+  }
+
+  .dropdown-body ol{
+    margin: 0 80px;
+  }
+
+
+  @media (min-width: 1024px) {
+    .dropdown-body img{
+      max-width: 925px;
+    }
   }

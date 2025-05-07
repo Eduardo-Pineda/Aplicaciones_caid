@@ -16,11 +16,22 @@ function createDropdowns(data) {
 
       header.addEventListener('click', () => {
         const allContainers = root.querySelectorAll('.dropdown-container');
+
+        [...document.querySelectorAll(".dropdown-container")].map(el => el.children[0].classList.remove('dropdown-title--borderRadiusFix'));
+
         allContainers.forEach((el) => {
-          if (el !== container) el.classList.remove('active');
+          if (el !== container) {
+            el.classList.remove('active');
+            header.classList.remove('dropdown-title--borderRadiusFix');
+          }
         });
 
         container.classList.toggle('active');
+        
+        if(container.classList.contains('active')){
+          header.classList.add('dropdown-title--borderRadiusFix');
+        }
+       
       });
 
       container.appendChild(header);
@@ -29,16 +40,28 @@ function createDropdowns(data) {
     });
   }
 
-  const data = [
-    ['Lorem ipsum dolor sit amet consectetur adipisicing elit?', 
-      `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.</p>`
-    ],
-    ['Lorem ipsum dolor sit amet consectetur adipisicing elit?', 
-      `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.</p>`
-    ],
-    ['Lorem ipsum dolor sit amet consectetur adipisicing elit?', 
-      `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo iste deserunt commodi impedit omnis. Obcaecati facere exercitationem et veniam dolorum omnis amet illo unde pariatur maxime qui id, modi dolorem velit suscipit excepturi voluptates voluptatum expedita ea necessitatibus ipsam quia architecto! Quam deserunt ducimus totam cum laudantium praesentium quidem cumque.</p>`
-    ]
-  ];
+  createDropdowns([
+    [
+      'Me sale una pagina de error al acceder a una pagina del CAID',
+      `
+        <p>Si accedes a una pagina oficial del CAID y te sale un error diciendo: "Tu conexion es privada" o "Your connection is not private", significa que existe un error de certificado entre el navegador y el servidor. Esto ocurre generalmente porque la hora del ordenador y el servidor no son la misma. Para saltar este error y acceder al servicio deseado siga los siguientes pasos:</p>
+        <br></br>
 
-  createDropdowns(data);
+        <ol>
+          <li>
+            <p>Dar click al boton "avanzado" o "Advanced".</p>
+            <img src="assets/c780f4b4-8ae3-4203-ad87-6234f13964bf.jpg"></img>
+          </li>
+          <li>
+            <p>Luego dar click a "proceder con" o "proceed to" para acceder al servicio.</p>
+            <img src="assets/cc205286-dc2a-49e2-846f-898cda8dee4d.jpg"></img>
+          </li>
+          <li>
+            <p>¡Y listo! Ya estamos dentro del servicio deseado.</p>
+            <img src="assets/7668d203-4c95-4644-b1ca-0de5af4972a3.jpg"></img>
+          </li>
+        </ol>
+      
+      `
+    ]
+  ]);
