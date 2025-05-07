@@ -50,15 +50,15 @@ function createDropdowns(data) {
         <ol>
           <li>
             <p>Dar click al boton "avanzado" o "Advanced".</p>
-            <img src="assets/c780f4b4-8ae3-4203-ad87-6234f13964bf.jpg"></img>
+            <img src="./assets/c780f4b4-8ae3-4203-ad87-6234f13964bf.jpg"></img>
           </li>
           <li>
             <p>Luego dar click a "proceder con" o "proceed to" para acceder al servicio.</p>
-            <img src="assets/cc205286-dc2a-49e2-846f-898cda8dee4d.jpg"></img>
+            <img src="./assets/cc205286-dc2a-49e2-846f-898cda8dee4d.jpg"></img>
           </li>
           <li>
             <p>¡Y listo! Ya estamos dentro del servicio deseado.</p>
-            <img src="assets/7668d203-4c95-4644-b1ca-0de5af4972a3.jpg"></img>
+            <img src="./assets/7668d203-4c95-4644-b1ca-0de5af4972a3.jpg"></img>
           </li>
         </ol>
       
