@@ -39,6 +39,17 @@
     align-items: center;
 }
 
+.app__title h1{
+    margin: 0 0 20px 0;
+}
+
+.app__title p{
+    width: 76%;
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
 /* CONTENEDOR DE HIPERVINCULO */
 .app__main{
     display: flex;
