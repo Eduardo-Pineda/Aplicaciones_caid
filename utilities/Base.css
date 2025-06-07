@@ -19,9 +19,7 @@ html{
 }
 
 body{
-    display: flex;
     background-color: var(--main-background-color);
-
 }
 
 header{

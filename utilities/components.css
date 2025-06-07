@@ -6,10 +6,6 @@
 
 /* BOTON INSTRUCCIONES DE USO */
 .main__button{
-    position: absolute;
-    top: 0;
-    right: 0;
-
     width: 180px;
 
     background-color: #73B060;
@@ -33,11 +29,6 @@
 }
 
 /* CONTENEDOR DE TITULO Y SUBTITULO */
-.app__title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .app__title h1{
     margin: 0 0 20px 0;
