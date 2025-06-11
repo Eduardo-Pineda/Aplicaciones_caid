@@ -80,8 +80,13 @@
   }
 
   .dropdown-title:hover {
-    background-color: #e0e0e0;
+    background-color: #c1c1c1;
   }
+
+  .no-hover:hover {
+    transform: none !important;
+    transition: none !important;
+}
 
   .dropdown-body {
     display: none;
