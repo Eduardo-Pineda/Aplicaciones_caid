@@ -20,7 +20,14 @@
     color: #fff;
 
     cursor: pointer;
+}
+
+.button--active{
     transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.button--hover{
+    transition: transform 0.2s ease;
 }
 
 .main__button:active {
@@ -28,17 +35,25 @@
     box-shadow: 0 2px 0 #73B060;
 }
 
+.main__button:hover{
+    transform: scale(1.1);
+}
+
 /* CONTENEDOR DE TITULO Y SUBTITULO */
 
 .app__title h1{
     margin: 0 0 20px 0;
+    font-size: 36px;
 }
 
 .app__title p{
     width: 76%;
     margin-bottom: 20px;
 
+    font-size: 18px;
+    font-weight: 400;
     text-align: center;
+    color: var(--dark-gray);
 }
 
 /* CONTENEDOR DE HIPERVINCULO */
@@ -101,14 +116,25 @@
     font-size: 64px;
     font-weight: 500;
     color: #44ADE2;
-    
+
+}
+
+.link--transition-acive{
     transition: transform 0.1s ease, box-shadow 0.1s ease;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.link--transition-hover{
+    transition: transform 0.2s ease;
 }
 
 .main__link a:active {
     transform: translateY(2px);
     box-shadow: 0 2px 0 #F5F7FA;
+}
+
+.main__link a:hover{
+    transform: scale(1.1);
 }
 
 .main__link p{

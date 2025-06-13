@@ -11,6 +11,8 @@ export default function linksLoader(container, links) {
         linkContainer.classList.add('main__link');
 
         const link = document.createElement('a');
+        link.classList.add("link--transition-acive");
+        link.classList.add("link--transition-hover")
         link.href = url;
         link.textContent = title[0];
 

@@ -1,3 +1,9 @@
+ @media (min-width: 1024px) {
+    .dropdown-body img{
+      max-width: 925px;
+    }
+}
+
 @media (min-width: 1024px) {
     .main__link-container{
         grid-template-columns: repeat(4, minmax(100px, 150px));
@@ -5,6 +11,21 @@
     .main__button{
         margin: 18px 45px 0 0;
     }
-  }
+
+    .app__title h1{
+        font-size: 48px;
+    }
+
+    .app__title p{
+        font-size: 20px;
+    }
+
+    .dropdown-title{
+        font-size: 20px;
+    }
+    .dropdown-body p {
+        font-size: 18px;
+    }
+}
 
 
